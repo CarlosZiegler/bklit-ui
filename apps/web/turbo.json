@@ -1,0 +1,17 @@
+{
+  "extends": ["//"],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build", "^build:docs"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        ".source/**",
+        "public/native-preview/**"
+      ]
+    },
+    "dev": {
+      "dependsOn": ["^build:docs"]
+    }
+  }
+}

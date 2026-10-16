@@ -1,0 +1,9 @@
+# Expo local state, logs, and cached device selection.
+.expo/
+
+# Temporary native bundle used to install the Expo Go preview.
+dist-ios/
+dist-android/
+
+# Static web export.
+dist/

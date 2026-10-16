@@ -1,0 +1,119 @@
+---
+title: React Native
+description: Bklit chart patterns for mobile, with an interactive Expo example and a native Studio.
+---
+
+Bklit Native brings the web chart catalog and composition patterns to React Native. The web components remain the design reference: shared visual language, familiar data keys, composable layers, and chart utilities adapted for touch.
+
+**Workspace preview:** the Native packages currently live in this repository and are not published to npm. Explore the demo below or run the Expo example from source.
+
+## Try it in your browser
+
+<NativeDemoPreview />
+
+This is the actual Expo example exported with React Native Web. It uses the Native package, rather than substituting the existing web chart components. Browser rendering lets you explore data, chart composition and Studio; it does not emulate an iOS or Android operating system.
+
+## What's included
+
+The mobile catalog and Studio include all **17 chart families** from the web Studio:
+
+| Category | Charts |
+| --- | --- |
+| Cartesian | Area, line, bar, scatter, candlestick, composed, live line, profit/loss line |
+| Radial | Pie, ring, gauge, radar |
+| Layout | Heatmap, funnel, Sankey, sunburst, choropleth |
+
+The catalog also demonstrates axes, grid, backgrounds, reference areas, projections, event markers, legends, custom tooltips and brush zoom. Two mobile stat-card blocks follow the web area and line blocks. The map block is excluded.
+
+### Mobile Studio
+
+Choose a chart family, edit its data or portable JSON specification, add and select layers, toggle visibility, adjust colors and motion, then generate native component code. Portable configuration includes chart settings, layers, data, motion and literal theme tokens. Callbacks and custom React content belong in application code.
+
+## Run the Expo example
+
+From a checkout of this repository:
+
+```bash
+pnpm install
+pnpm native-demo:ios
+```
+
+Use `pnpm native-demo:android` for Android, or `pnpm native-demo:web` for the browser. The example uses Expo SDK 56; use a compatible Expo Go runtime or development build.
+
+The example is in `apps/native`, chart components in `packages/native`, and the portable JSON configuration in `packages/chart-spec`. Both packages are private workspace packages. Generated Studio code assumes these packages are available in your workspace.
+
+## Familiar component composition
+
+```tsx
+import {
+  ChartThemeProvider,
+  LineChart,
+  Area,
+  Line,
+  Grid,
+  XAxis,
+  YAxis,
+  ChartTooltip,
+  ChartLegend,
+} from "@bklitui/native";
+
+const data = [
+  { date: "2026-10-01", revenue: 42 },
+  { date: "2026-10-02", revenue: 58 },
+  { date: "2026-10-03", revenue: 51 },
+];
+
+export function RevenueChart() {
+  return (
+    <ChartThemeProvider theme={{ seriesColors: ["#83b4da"] }}>
+      <LineChart data={data} xDataKey="date" xScale="time" height={240}>
+        <Grid horizontal />
+        <Area dataKey="revenue" fill="#83b4da" fillOpacity={0.12} />
+        <Line dataKey="revenue" stroke="#83b4da" strokeWidth={2.5} />
+        <XAxis numTicks={3} />
+        <YAxis numTicks={4} formatLargeNumbers />
+        <ChartTooltip />
+        <ChartLegend />
+      </LineChart>
+    </ChartThemeProvider>
+  );
+}
+```
+
+## Style and customization
+
+`ChartThemeProvider` follows system appearance. Override `colorScheme` with `"light"` or `"dark"`, or supply partial theme tokens: `color`, `seriesColors`, `scaleColors`, `gridColor`, `surfaceColor`, `textColor` and `trackColor`. Explicit layer colors take precedence over the palette.
+
+Use React Native `style` objects and literal color values such as hex or `rgb()`. CSS variables and `className` from the web API need native equivalents. `seriesColors` distinguishes series; `scaleColors` controls sequential intensity for heatmaps and choropleths.
+
+## Web and native behavior
+
+| Web pattern | Native adaptation |
+| --- | --- |
+| Hover inspection | Touch selection and native tooltips |
+| DOM content and CSS | React Native content, styles and SVG properties |
+| Browser motion | Reanimated transitions and system Reduce Motion |
+| Browser controls | Expo UI controls on supported platforms |
+| Desktop Studio | Expo Studio with chart, data, layer and code controls |
+
+The renderer uses `react-native-svg`, Reanimated and Gesture Handler. Skia is not required. The example uses `@expo/ui` for suitable controls, with platform-specific implementations.
+
+The native API follows the web patterns but does not promise identical support for every web prop or effect. The current Cartesian renderer has one shared Y scale. DOM portals, CSS filters, perspective/glass bar effects, browser Motion objects and browser NumberFlow digit animation require native adaptations. See `packages/native/PARITY.md` and the family READMEs in the repository for details.
+
+## Why this preview uses an Expo web export
+
+[Expo Snack supports embedded examples](https://github.com/expo/snack/blob/main/docs/embedding-snacks.md), including browser previews. Snack resolves dependencies through its own [package bundling service](https://github.com/expo/snack/blob/main/docs/dependencies-bundling.md); our private `workspace:*` packages are not published npm dependencies it can resolve directly.
+
+Publishing to npm is **not required** to use Snack: its [multi-file input](https://github.com/expo/snack/blob/main/docs/url-query-parameters.md#files) can include the component source files directly. A prepared source bundle is another way to provide a runnable example without private workspace imports. Either approach needs SDK and dependency compatibility checks; a Bklit Snack has not yet been validated.
+
+The embedded Expo web export currently runs the same workspace source as the mobile example, including all 17 families and Studio. It provides the full catalog while a source-based Snack can offer focused examples with editable code and device previews.
+
+## Verification
+
+### Performance status
+
+Native is still a workspace preview. The architecture/performance audit found useful improvements in dense-line JavaScript updates, but high-density interaction still exceeded the UI scheduling budget in the simulator, including with production JavaScript. Keep displayed datasets bounded and validate your target workload on physical devices before shipping. The detailed findings and reproducible benchmark commands are in `packages/native/AUDIT.md`.
+
+### Functional coverage
+
+The Native packages and Expo example pass 86 native tests, TypeScript checks and web/iOS/Android JavaScript exports. Simulator review covers the 17 chart families, touch interactions, Studio editing, light/dark appearance, enlarged text and Reduce Motion on iOS. Android device execution and physical-device release performance still need separate verification.

@@ -1,0 +1,19 @@
+{
+  "tool": "esbuild with native/React peers external; not a Metro/Hermes install-size measurement",
+  "results": [
+    {
+      "name": "line-only-public-entry",
+      "minifiedBytes": 55034,
+      "gzipBytes": 19231,
+      "retainedModules": 25,
+      "includesWorldAtlas": false
+    },
+    {
+      "name": "all-public-exports",
+      "minifiedBytes": 222817,
+      "gzipBytes": 76161,
+      "retainedModules": 145,
+      "includesWorldAtlas": false
+    }
+  ]
+}

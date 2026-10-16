@@ -1,0 +1,50 @@
+{
+  "environment": {
+    "node": "v24.22.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4 Pro"
+  },
+  "note": "Pure geometry CPU timings in Node; not Hermes, React commits, SVG paint or device FPS.",
+  "results": [
+    {
+      "name": "cartesian-100-points-3-series",
+      "iterations": 40,
+      "medianMs": 0.244,
+      "p95Ms": 0.436,
+      "maxMs": 0.503
+    },
+    {
+      "name": "cartesian-1000-points-3-series",
+      "iterations": 40,
+      "medianMs": 1.796,
+      "p95Ms": 2.404,
+      "maxMs": 3.911
+    },
+    {
+      "name": "cartesian-10000-points-3-series",
+      "iterations": 40,
+      "medianMs": 18.447,
+      "p95Ms": 22.059,
+      "maxMs": 25.415
+    },
+    {
+      "name": "bar-100-categories-3-series",
+      "iterations": 40,
+      "medianMs": 0.041,
+      "p95Ms": 0.06,
+      "maxMs": 0.061
+    },
+    {
+      "name": "heatmap-140-cells",
+      "iterations": 40,
+      "medianMs": 0.005,
+      "p95Ms": 0.02,
+      "maxMs": 0.021
+    },
+    {
+      "name": "cartesian-200000-domain-stress",
+      "error": "RangeError: Maximum call stack size exceeded"
+    }
+  ]
+}

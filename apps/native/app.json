@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "bklit Native",
+    "slug": "bklit-native",
+    "scheme": "bklit-native",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.bklit.native"
+    },
+    "android": {
+      "package": "com.bklit.native"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "plugins": ["expo-router"]
+  }
+}

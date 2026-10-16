@@ -1,0 +1,145 @@
+{
+  "environment": "iPhone 16e simulator / Expo Go development; synthetic selection every 32ms; 1.5s warmup, 5s window. UI frame totals may include cross-case gaps; use React durations and JS drift for before/after comparison.",
+  "results": [
+    {
+      "name": "line-100-static",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "count": 301,
+        "totalMs": 5016.666666671634,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.51,
+      "react": {
+        "commits": 6,
+        "p95Ms": 26.04,
+        "maxMs": 33.73
+      }
+    },
+    {
+      "name": "line-1000-selection",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "count": 130,
+        "totalMs": 5033.333333328366,
+        "maxMs": 84.10191666334867,
+        "over25ms": 123,
+        "over50ms": 21,
+        "meanFrameMs": 38.72
+      },
+      "jsTimerDriftP95Ms": 1.67,
+      "react": {
+        "commits": 264,
+        "p95Ms": 4.71,
+        "maxMs": 23.34
+      }
+    },
+    {
+      "name": "line-10000-selection",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "count": 1,
+        "totalMs": 3871.5034999996424,
+        "maxMs": 3871.5034999996424,
+        "over25ms": 1,
+        "over50ms": 1,
+        "meanFrameMs": 3871.5
+      },
+      "jsTimerDriftP95Ms": 1.71,
+      "react": {
+        "commits": 147,
+        "p95Ms": 6.72,
+        "maxMs": 150.73
+      }
+    },
+    {
+      "name": "bar-100-selection",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "count": 302,
+        "totalMs": 5033.333333328366,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 57.18,
+      "react": {
+        "commits": 82,
+        "p95Ms": 39.87,
+        "maxMs": 105.02
+      }
+    },
+    {
+      "name": "scatter-300-selection",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "count": 126,
+        "totalMs": 5066.666666671634,
+        "maxMs": 84.56008333712816,
+        "over25ms": 64,
+        "over50ms": 40,
+        "meanFrameMs": 40.21
+      },
+      "jsTimerDriftP95Ms": 140.6,
+      "react": {
+        "commits": 50,
+        "p95Ms": 64.87,
+        "maxMs": 210.14
+      }
+    },
+    {
+      "name": "heatmap-364-static",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "count": 301,
+        "totalMs": 5016.666666671634,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.82,
+      "react": {
+        "commits": 3,
+        "p95Ms": 6.25,
+        "maxMs": 120.65
+      }
+    },
+    {
+      "name": "live-120",
+      "environment": "development",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "count": 301,
+        "totalMs": 5016.666666664183,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.51,
+      "react": {
+        "commits": 50,
+        "p95Ms": 8.05,
+        "maxMs": 10.05
+      }
+    }
+  ]
+}

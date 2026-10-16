@@ -15,6 +15,20 @@ const nextConfig = {
     optimizePackageImports: ["@bklitui/ui", "@bklitui/ui/charts"],
     viewTransition: true,
   },
+  async rewrites() {
+    return {
+      beforeFiles: [
+        {
+          source: "/native-preview",
+          destination: "/native-preview/index.html",
+        },
+        {
+          source: "/native-preview/:screen(charts|studio)",
+          destination: "/native-preview/:screen.html",
+        },
+      ],
+    };
+  },
   async headers() {
     return [
       {

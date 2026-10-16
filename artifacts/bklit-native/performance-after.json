@@ -1,0 +1,53 @@
+{
+  "environment": {
+    "node": "v24.22.0",
+    "platform": "darwin",
+    "arch": "arm64",
+    "cpu": "Apple M4 Pro"
+  },
+  "note": "Pure geometry CPU timings in Node; not Hermes, React commits, SVG paint or device FPS.",
+  "results": [
+    {
+      "name": "cartesian-100-points-3-series",
+      "iterations": 40,
+      "medianMs": 0.271,
+      "p95Ms": 0.492,
+      "maxMs": 0.579
+    },
+    {
+      "name": "cartesian-1000-points-3-series",
+      "iterations": 40,
+      "medianMs": 1.893,
+      "p95Ms": 2.473,
+      "maxMs": 2.582
+    },
+    {
+      "name": "cartesian-10000-points-3-series",
+      "iterations": 40,
+      "medianMs": 19.356,
+      "p95Ms": 23.639,
+      "maxMs": 23.964
+    },
+    {
+      "name": "bar-100-categories-3-series",
+      "iterations": 40,
+      "medianMs": 0.046,
+      "p95Ms": 0.06,
+      "maxMs": 0.071
+    },
+    {
+      "name": "heatmap-140-cells",
+      "iterations": 40,
+      "medianMs": 0.005,
+      "p95Ms": 0.019,
+      "maxMs": 0.02
+    },
+    {
+      "name": "cartesian-200000-domain-stress",
+      "iterations": 2,
+      "medianMs": 220.27,
+      "p95Ms": 220.27,
+      "maxMs": 220.27
+    }
+  ]
+}

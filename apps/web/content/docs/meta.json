@@ -2,6 +2,7 @@
   "title": "Documentation",
   "pages": [
     "theming",
+    "native",
     "skills",
     "---Components---",
     "...components",

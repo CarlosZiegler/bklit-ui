@@ -3,17 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS='--max-old-space-size=16384' next dev --turbopack",
-    "dev:webpack": "NODE_OPTIONS='--max-old-space-size=16384' next dev",
+    "dev": "pnpm native-preview:prepare && NODE_OPTIONS='--max-old-space-size=16384' next dev --turbopack",
+    "dev:webpack": "pnpm native-preview:prepare && NODE_OPTIONS='--max-old-space-size=16384' next dev",
     "dev:docs": "pnpm build && pnpm start",
-    "build": "pnpm charts:count && next build",
+    "build": "pnpm native-preview:prepare && pnpm charts:count && pnpm docs:generate && next build",
     "charts:count": "node --conditions=import --import tsx scripts/count-chart-variations.tsx",
     "start": "next start",
     "lint": "next lint",
     "check-types": "tsc --noEmit",
     "test": "node scripts/run-tests.mjs",
     "test:og": "node scripts/verify-studio-og-images.mjs",
-    "bench:bundle-sizes": "node scripts/bench-bundle-sizes.mjs"
+    "bench:bundle-sizes": "node scripts/bench-bundle-sizes.mjs",
+    "native-preview:prepare": "node scripts/prepare-native-preview.mjs",
+    "docs:generate": "fumadocs-mdx"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
@@ -62,6 +64,7 @@
   },
   "devDependencies": {
     "@bklitui/eslint-config": "workspace:*",
+    "@bklitui/native-demo": "workspace:*",
     "@bklitui/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "^4.1.8",
     "@types/d3-scale": "^4.0.9",
@@ -69,7 +72,7 @@
     "@types/geojson": "^7946.0.16",
     "@types/jsdom": "^28.0.3",
     "@types/node": "^22.15.3",
-    "@types/react": "19.2.2",
+    "@types/react": "19.2.18",
     "@types/react-dom": "19.2.2",
     "@types/topojson-client": "^3.1.5",
     "@types/topojson-specification": "^1.0.5",

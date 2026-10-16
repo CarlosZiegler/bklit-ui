@@ -30,6 +30,8 @@ coverage
 out/
 build
 dist
+dist-docs/
+apps/web/public/native-preview/
 
 
 # Debug

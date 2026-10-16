@@ -55,6 +55,7 @@ interface SiteHeaderProps {
 
 const guides = [
   { text: "Theming", url: "/docs/theming" },
+  { text: "React Native", url: "/docs/native" },
   { text: "Skills", url: "/docs/skills" },
 ];
 

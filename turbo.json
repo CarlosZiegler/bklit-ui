@@ -26,6 +26,13 @@
     "dev": {
       "cache": false,
       "persistent": true
+    },
+    "build:docs": {
+      "dependsOn": ["^build:docs"],
+      "outputs": ["dist-docs/**"]
+    },
+    "benchmark": {
+      "cache": false
     }
   }
 }

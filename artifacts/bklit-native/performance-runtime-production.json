@@ -1,0 +1,215 @@
+{
+  "environment": "iPhone 16e simulator / Expo Go; JavaScript --no-dev --minify, not a custom native release build. React Profiler is disabled; zero commit counts are unavailable measurements. UI metrics use timestamp deltas reset at each case; count 0 means insufficient UI callbacks, not zero render cost.",
+  "results": [
+    {
+      "name": "line-100-static",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "lastTimestamp": 54452383.33333334,
+        "count": 299,
+        "totalMs": 5000,
+        "maxMs": 33.33333333581686,
+        "over25ms": 1,
+        "over50ms": 0,
+        "meanFrameMs": 16.72
+      },
+      "jsTimerDriftP95Ms": 1.51,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "line-1000-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54458933.33333335,
+        "count": 137,
+        "totalMs": 5000,
+        "maxMs": 85.30333333462477,
+        "over25ms": 135,
+        "over50ms": 12,
+        "meanFrameMs": 36.5
+      },
+      "jsTimerDriftP95Ms": 1.58,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "line-10000-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54462974.27370834,
+        "count": 0,
+        "totalMs": 0,
+        "maxMs": 0,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 0
+      },
+      "jsTimerDriftP95Ms": 1.7,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "bar-100-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54472116.66666668,
+        "count": 298,
+        "totalMs": 4966.666666671634,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 14.5,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "scatter-300-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54478678.555625014,
+        "count": 121,
+        "totalMs": 5011.888958334923,
+        "maxMs": 69.33224999904633,
+        "over25ms": 92,
+        "over50ms": 42,
+        "meanFrameMs": 41.42
+      },
+      "jsTimerDriftP95Ms": 25.69,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "heatmap-364-static",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "lastTimestamp": 54485216.66666668,
+        "count": 300,
+        "totalMs": 5000,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.64,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "live-120",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": null,
+      "ui": {
+        "lastTimestamp": 54491766.66666668,
+        "count": 300,
+        "totalMs": 5000,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.48,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "line-100-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54672983.33333334,
+        "count": 295,
+        "totalMs": 5000,
+        "maxMs": 43.59004166722298,
+        "over25ms": 4,
+        "over50ms": 0,
+        "meanFrameMs": 16.95
+      },
+      "jsTimerDriftP95Ms": 1.86,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "bar-12-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54679500.000000015,
+        "count": 299,
+        "totalMs": 4983.333333335817,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.82,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    },
+    {
+      "name": "scatter-50-selection",
+      "environment": "production",
+      "windowMs": 5000,
+      "selectionIntervalMs": 32,
+      "ui": {
+        "lastTimestamp": 54686033.33333335,
+        "count": 300,
+        "totalMs": 5000,
+        "maxMs": 16.66666667163372,
+        "over25ms": 0,
+        "over50ms": 0,
+        "meanFrameMs": 16.67
+      },
+      "jsTimerDriftP95Ms": 1.42,
+      "react": {
+        "commits": 0,
+        "p95Ms": 0,
+        "maxMs": 0
+      }
+    }
+  ]
+}
